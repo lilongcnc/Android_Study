@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Login</string>
+
+
+    <string name="input_password">请输入密码</string>
+    <string name="input_name">请输入登录名</string>
+    <string name="tip_name">是否保存密码</string>
+
+</resources>
