@@ -12,6 +12,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText et_name;
@@ -34,7 +37,14 @@ public class MainActivity extends AppCompatActivity {
         cx_isSaveData = (CheckBox)findViewById(R.id.cb_saveData);
 
         //获取本地保存信息,设置界面的显示
-//        cx_isSaveData.setChecked(true);
+//        Map<String,String> savedUserInfoMap = UserInfoUtil.getSavedUserInfo();
+//        if (savedUserInfoMap != null) {
+//            et_name.setText(savedUserInfoMap.get("userName"));
+//            et_pw.setText(savedUserInfoMap.get("userPW"));
+//            cx_isSaveData.setChecked(true);
+//        }else
+//            cx_isSaveData.setChecked(false);
+
 
 
         //设置按钮的点击事件
