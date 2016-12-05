@@ -25,11 +25,13 @@ public class UserInfoUtil {
         try{
             String userInfo = name + "##"+ passWord;//不要用正则表达符号,比如**
 //            String saveFilePath = "/data/data/com.Lauren.Login/";
-            String path = context.getFilesDir().getPath();
-            File file = new File(path,"userInfo.txt");//创建 File
+//            String path = context.getFilesDir().getPath();
+//            File file = new File(path,"userInfo.txt");//创建 File
+//            outPutStream = new FileOutputStream(file);
+//            Log.e("保存地址",file.getPath());
 
-            Log.e("保存地址",file.getPath());
-            outPutStream = new FileOutputStream(file);
+            //通过context对象得到私有目录下一个文件写入流； name : 私有目录文件的名称    mode： 文件的操作模式， 私有，追加，全局读，全局写
+            outPutStream = context.openFileOutput("userInfo.txt",Context.MODE_APPEND);
             outPutStream.write(userInfo.getBytes());
             outPutStream.close();
 
@@ -52,11 +54,12 @@ public class UserInfoUtil {
         FileInputStream inPutStream = null;
         try{
 //            String saveFilePath = "/data/data/com.Lauren.Login/";
-            String path = context.getFilesDir().getPath();
-            File file = new File(path,"userInfo.txt");
+//            String path = context.getFilesDir().getPath();
+//            File file = new File(path,"userInfo.txt");
+//            inPutStream = new FileInputStream(file);
 
-            inPutStream = new FileInputStream(file);
-
+            //通过context对象获取一个私有目录的文件读取流  /data/data/packagename/files/userinfoi.txt
+            inPutStream= context.openFileInput("userInfo.txt");
             bReader = new BufferedReader(new InputStreamReader(inPutStream));
 
             String oneLine = bReader.readLine();
