@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
         cx_isSaveData = (CheckBox)findViewById(R.id.cb_saveData);
 
         //获取本地保存信息,设置界面的显示
-//        Map<String,String> savedUserInfoMap = UserInfoUtil.getSavedUserInfo();
-//        if (savedUserInfoMap != null) {
-//            et_name.setText(savedUserInfoMap.get("userName"));
-//            et_pw.setText(savedUserInfoMap.get("userPW"));
-//            cx_isSaveData.setChecked(true);
-//        }else
-//            cx_isSaveData.setChecked(false);
+        Map<String,String> savedUserInfoMap = UserInfoUtil.getSavedUserInfo(mContext);
+        if (savedUserInfoMap != null) {
+            et_name.setText(savedUserInfoMap.get("userName"));
+            et_pw.setText(savedUserInfoMap.get("userPW"));
+            cx_isSaveData.setChecked(true);
+        }else
+            cx_isSaveData.setChecked(false);
 
 
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 if (cx_isSaveData.isChecked() == true){
-                    Boolean result = UserInfoUtil.saveUserInfo(name,password);
+                    Boolean result = UserInfoUtil.saveUserInfo(mContext,name,password);
 
                     if (result)
                         //保存用户名和密码
