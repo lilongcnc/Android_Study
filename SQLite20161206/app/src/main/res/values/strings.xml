@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SQLite20161206</string>
+    <string name="btnName_modify">modify</string>
+    <string name="btnName_query">query</string>
+    <string name="btnName_del">del</string>
+    <string name="btnName_add">add</string>
+</resources>
