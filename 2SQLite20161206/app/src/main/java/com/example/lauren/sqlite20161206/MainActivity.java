@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btn_modify = (Button)findViewById(R.id.btn_modify);
 
 
+
         btn_add.setOnClickListener(this);
         btn_del.setOnClickListener(this);
         btn_query.setOnClickListener(this);
