@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lauren.sqlite20161206.MainActivity"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnName_add"
+        />
+
+    <Button
+        android:id="@+id/btn_del"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnName_del"
+        />
+
+    <Button
+        android:id="@+id/btn_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnName_query"
+        />
+
+    <Button
+        android:id="@+id/btn_modify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnName_modify"
+        />
+
+</LinearLayout>
