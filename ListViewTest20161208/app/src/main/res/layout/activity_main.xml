@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.lauren.listviewbasic20161208.MainActivity">
+    tools:context="com.lauren.listviewtest20161208.MainActivity">
 
  <ListView
      android:id="@+id/lv_tiger1"

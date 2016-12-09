@@ -1,14 +1,12 @@
-package com.lauren.listviewbasic20161208;
+package com.lauren.listviewtest20161208;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 

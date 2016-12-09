@@ -1,4 +1,4 @@
-package com.lauren.listviewbasic20161208;
+package com.lauren.listviewtest20161208;
 
 import org.junit.Test;
 
