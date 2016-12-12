@@ -3,10 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:gravity="center"
+    android:id="@+id/item_news_layout"
     >
 
     <ImageView
-        android:gravity="center"
+        android:id="@+id/item_img_newsFacePhoto"
         android:layout_width="68dp"
         android:layout_height="68dp"
         android:background="#ff07ff"
@@ -14,7 +16,6 @@
 
 
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -22,19 +23,24 @@
         >
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/item_tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="111111111"
-            android:textColor="#000000"
-            android:textSize="17sp" />
+            android:lines="2"
+            android:textColor="#ff07"
+            android:textSize="17sp"
+            android:layout_marginTop="5dp"
+            />
 
         <TextView
-            android:id="@+id/tv_desc"
+            android:id="@+id/item_tv_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="2222221"
-            android:textColor="#000000" />
+            android:lines="2"
+            android:textColor="#000000"
+            />
 
     </LinearLayout>
 

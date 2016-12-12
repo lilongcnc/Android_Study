@@ -12,14 +12,12 @@ import com.lauren.listviewtest20161208.model.InfoBean;
  * Created by Lauren on 16/12/6.
  */
 
-public class InfoDao {
+public class NewsBeanDBUtils {
 
     private MySQliteOpenHelper mySqliteOpenHelper;
-    public InfoDao(Context context){
+    public NewsBeanDBUtils(Context context){
         //创建一个帮助类对象
         mySqliteOpenHelper = new MySQliteOpenHelper(context);
-
-
     }
 
     public boolean add(InfoBean bean){

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import android.content.Context;
 
 
-public class NewsUtils {
+public class NewsTempData {
 
 	//封装新闻的假数据到list中返回
 	public static ArrayList<InfoBean> getAllNews(Context context) {
