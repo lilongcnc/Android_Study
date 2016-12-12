@@ -21,7 +21,7 @@ public class MySQliteOpenHelper  extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         //通过SQLiteDatabase执行一个创建表的sql语句
-        db.execSQL("create table info (_id integer primary key autoincrement,pic_url varchar(50),title varchar(50)),desc varchar(80) news_url varchar(80)");
+        db.execSQL("create table info (_id integer primary key autoincrement,pic_url varchar(50),title varchar(50),desc varchar(80), news_url varchar(80))");
     }
 
     //onUpgrade数据库版本号发生改变时才会执行； 特别适合做表结构的修改

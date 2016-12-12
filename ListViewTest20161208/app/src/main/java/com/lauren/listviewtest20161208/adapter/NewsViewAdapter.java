@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class NewsViewAdapter extends BaseAdapter{
 
-    private  ArrayList<InfoBean> arrayList;
+    public   ArrayList<InfoBean> arrayList;
     private  Context mContext;
     public NewsViewAdapter(Context context, ArrayList<InfoBean> list){
 
