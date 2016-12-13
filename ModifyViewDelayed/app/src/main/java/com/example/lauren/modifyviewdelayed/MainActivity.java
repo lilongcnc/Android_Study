@@ -23,5 +23,17 @@ public class MainActivity extends AppCompatActivity {
                 tv_mainshow.setText("更新啦啊啊");
             }
         },1000*3);
+
+
+//        runOnUiThread(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//                //
+//                TextView tv_mainshow = (TextView) findViewById(R.id.tv_mainshow);
+//                tv_mainshow.setText("更新啦啊啊");
+//            }
+//        });
+
     }
 }
