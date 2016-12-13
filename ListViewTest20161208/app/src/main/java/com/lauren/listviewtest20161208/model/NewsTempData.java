@@ -86,7 +86,7 @@ public class NewsTempData {
 
 		if (mDBUtils.queryAll().size() == 0)
 			arrayList = this.getAllNews();
-		else
+		else 
 			arrayList = mDBUtils.queryAll();
 
 		Log.e("222222222",mDBUtils.queryAll().size()+"");
