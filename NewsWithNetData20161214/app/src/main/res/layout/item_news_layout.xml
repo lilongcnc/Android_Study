@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+
+    <com.loopj.android.image.SmartImageView
+        android:id="@+id/imgv_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#ff00"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="标题"
+            android:textSize="17sp"
+            android:textColor="#ff00"
+            />
+
+        <TextView
+            android:id="@+id/tv_dec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="描述"
+            android:textSize="13sp"
+            android:layout_below="@+id/tv_title"
+            />
+        <TextView
+            android:id="@+id/tv_dec2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="描述"
+            android:textSize="13sp"
+            android:layout_below="@+id/tv_dec"
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/tv_dec2"
+            >
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_credit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="现金积分"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_scolo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="反现金积分"
+                android:textSize="13sp"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
