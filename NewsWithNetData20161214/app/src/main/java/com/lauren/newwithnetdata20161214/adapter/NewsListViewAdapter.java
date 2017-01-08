@@ -1,6 +1,7 @@
 package com.lauren.newwithnetdata20161214.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -47,6 +48,8 @@ public class NewsListViewAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
+        Log.e("apapter 进来了", "getView: 进来了");
+
         View itemView = null;
         if (itemView != null)
             itemView = view;
@@ -57,12 +60,12 @@ public class NewsListViewAdapter extends BaseAdapter {
 
 
         //2.获取view上的子控件对象
-        SmartImageView imgv_logo = (SmartImageView) view.findViewById(R.id.imgv_logo);
-        TextView tv_title = (TextView) view.findViewById(R.id.tv_title);
-        TextView tv_dec = (TextView) view.findViewById(R.id.tv_dec);
-        TextView tv_dec2 = (TextView) view.findViewById(R.id.tv_dec2);
-        TextView tv_credit = (TextView) view.findViewById(R.id.tv_credit);
-        TextView tv_scolo = (TextView) view.findViewById(R.id.tv_scolo);
+        SmartImageView imgv_logo = (SmartImageView) itemView.findViewById(R.id.imgv_logo);
+        TextView tv_title = (TextView) itemView.findViewById(R.id.tv_title);
+        TextView tv_dec = (TextView) itemView.findViewById(R.id.tv_dec);
+        TextView tv_dec2 = (TextView) itemView.findViewById(R.id.tv_dec2);
+        TextView tv_credit = (TextView) itemView.findViewById(R.id.tv_credit);
+        TextView tv_scolo = (TextView) itemView.findViewById(R.id.tv_scolo);
 
         //获取模型赋值数据
         RecommondInfo recommondInfo = dataArrayList.get(i);

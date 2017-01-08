@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.lauren.newwithnetdata20161214.model.RecommondInfo;
 
@@ -25,6 +26,28 @@ public class InfoDaoUtils {
 
     }
 
+
+
+    public int del(){
+
+        //执行sql语句需要sqliteDatabase对象
+        //调用getReadableDatabase方法,来初始化数据库的创建
+        SQLiteDatabase db = mySqliteOpenHelper.getReadableDatabase();
+        //table ：表名, whereClause: 删除条件, whereArgs：条件的占位符的参数 ; 返回值：成功删除多少行
+        int result = db.delete("info", null,null );
+        Log.e("del result:",result+"");
+        if (result == 1)
+            Log.e("删除成功","删除成功");
+        else
+            Log.e("删除失败","删除失败");
+        //关闭数据库对象
+        db.close();
+        return result;
+    }
+
+
+
+
     public void add(ArrayList<RecommondInfo> arraylist){
 
         //执行sql语句需要sqliteDatabase对象
@@ -32,11 +55,9 @@ public class InfoDaoUtils {
         SQLiteDatabase 	db = mySqliteOpenHelper.getReadableDatabase();
 
         //循环保存
-        ArrayList<RecommondInfo> arrayList = new ArrayList<RecommondInfo>();
+        for (int index = 0;index < arraylist. size();index++){
 
-        for (int index = 0;index < arrayList. size();index++){
-
-            RecommondInfo recommondInfo = arrayList.get(index);
+            RecommondInfo recommondInfo = arraylist.get(index);
 
             ContentValues values = new ContentValues();//是用map封装的对象，用来存放值
             values.put("Logo", recommondInfo.Logo);
@@ -47,7 +68,9 @@ public class InfoDaoUtils {
             values.put("SoloCreditPercent", recommondInfo.SoloCreditPercent);
 
             //table: 表名 , nullColumnHack：可以为空，标示添加一个空行, values:数据一行的值 , 返回值：代表添加这个新行的Id ，-1代表添加失败
-            db.insert("info", null, values);//底层是在拼装sql语句
+            long result = db.insert("info", null, values);//底层是在拼装sql语句
+            Log.e("插入数据库操作",result+"");
+
 
         }
 
@@ -55,17 +78,6 @@ public class InfoDaoUtils {
         db.close();
     }
 
-    public int del(){
-
-        //执行sql语句需要sqliteDatabase对象
-        //调用getReadableDatabase方法,来初始化数据库的创建
-        SQLiteDatabase db = mySqliteOpenHelper.getReadableDatabase();
-        //table ：表名, whereClause: 删除条件, whereArgs：条件的占位符的参数 ; 返回值：成功删除多少行
-        int result = db.delete("info", null,null );
-        //关闭数据库对象
-        db.close();
-        return result;
-    }
 
 
     public ArrayList<RecommondInfo> query(){

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lauren.morethreaddownloadbase.MainActivity"
+    android:orientation="vertical">
+
+   <EditText
+       android:id="@+id/et_threadNumber"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:hint="输入几条线程数量"
+       />
+
+   <Button
+       android:id="@+id/btn_dowland"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:text="下载"/>
+
+   <LinearLayout
+       android:id="@+id/ll_progresslayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"></LinearLayout>
+
+</LinearLayout>
