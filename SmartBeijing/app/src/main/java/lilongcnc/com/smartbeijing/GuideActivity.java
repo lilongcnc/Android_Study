@@ -6,11 +6,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterViewAnimator;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Lauren on 2017/4/9.
