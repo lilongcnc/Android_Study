@@ -25,21 +25,28 @@
         android:visibility="invisible"
         />
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="10dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:layout_weight="3"-->
-        <!--&gt;-->
-        <!---->
-        <!--<ImageView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
+    <!--相对布局:红色原点覆盖在灰色的圆点上边的-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        >
+        <!--LinerLayout里边添加是灰色的滚定位置的小圆点-->
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </LinearLayout>
+        <!--这个红色的小圆图片,是在灰色原点上边移动的图片-->
+        <ImageView
+            android:id="@+id/iv_red_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shape_point_red" />
+    </RelativeLayout>
 
-
-
-            <!--/>-->
-    <!--</LinearLayout>-->
 
 
 </RelativeLayout>
