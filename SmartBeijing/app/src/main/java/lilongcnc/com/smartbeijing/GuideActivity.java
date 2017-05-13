@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -62,6 +63,7 @@ public class GuideActivity extends Activity {
 
                 //更新小红点的距离
                 //计算小红点当前的左边距
+                //positionOffset: 移动偏移百分比
                 int leftMargin= (int)(mPointDis*positionOffset) + position*mPointDis;
                 RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)iconView_red.getLayoutParams();
                 //修改左边距
@@ -95,10 +97,10 @@ public class GuideActivity extends Activity {
 
        */
         //计算两个圆点的距离
+
         //移动距离=第二个圆点left值 - 第一个圆点left值
         // measure->layout(确定位置)->draw(activity的onCreate方法执行结束之后才会走此流程)
-        // mPointDis = llContainer.getChildAt(1).getLeft()
-        // - llContainer.getChildAt(0).getLeft();
+        // mPointDis = llContainer.getChildAt(1).getLeft() - llContainer.getChildAt(0).getLeft();
         // System.out.println("圆点距离:" + mPointDis);
         iconView_red.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
@@ -108,23 +110,22 @@ public class GuideActivity extends Activity {
                 iconView_red.getViewTreeObserver().removeGlobalOnLayoutListener(this);
                 // ivRedPoint.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 // layout方法执行结束的回调
-                mPointDis = llContainer.getChildAt(1).getLeft() - llContainer.getChildAt(0).getLeft();
-                System.out.println("圆点距离:" + mPointDis);
+                 mPointDis = llContainer.getChildAt(1).getLeft() - llContainer.getChildAt(0).getLeft();
+
+
+//                System.out.println("圆点距离:" + mPointDis);
             }
         });
 
+        //开启按钮
         btn_start.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  PrefUtils.setBoolean(getApplicationContext(),"is_first_enter", false);
-
                  startActivity(new Intent(getApplicationContext(),MainActivity.class));
                  finish();
              }
         });
-
-
-
     }
 
 
