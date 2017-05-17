@@ -37,7 +37,8 @@
         <LinearLayout
             android:id="@+id/ll_container"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
         </LinearLayout>
         <!--这个红色的小圆图片,是在灰色原点上边移动的图片-->
         <ImageView
